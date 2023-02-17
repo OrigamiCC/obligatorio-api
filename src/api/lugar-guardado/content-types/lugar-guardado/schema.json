@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lugares_guardados",
+  "info": {
+    "singularName": "lugar-guardado",
+    "pluralName": "lugares-guardados",
+    "displayName": "Lugares guardados",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "lugar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lugar.lugar"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

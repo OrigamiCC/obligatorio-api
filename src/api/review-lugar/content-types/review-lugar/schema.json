@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "review_lugares",
+  "info": {
+    "singularName": "review-lugar",
+    "pluralName": "review-lugares",
+    "displayName": "Review lugar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comentario": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "string",
+      "regex": "^[1-5]$"
+    },
+    "lugar": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lugar.lugar"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

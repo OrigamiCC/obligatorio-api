@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventos_guardados",
+  "info": {
+    "singularName": "evento-guardado",
+    "pluralName": "eventos-guardados",
+    "displayName": "Eventos guardados"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "evento": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::evento.evento"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
